@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 
-const TodoList = ({ todoList, setTodoList }) => {
-  const [completedTasks, setCompletedTasks] = useState(0);
+const TodoList = ({ todoList, setTodoList, setCompletedTasks, completedTasks }) => {
+ 
   const handleDelete = ({ id, complete }) => {
     const updatedTodo = [...todoList].filter((task) => task.id !== id);
     setTodoList(updatedTodo);
